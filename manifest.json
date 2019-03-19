@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name": "AutoFollow",
+    "description": "This allows the extension to auto click link and button in every hour",
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": {
+            "38": "auto.png"
+        }
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "content_scripts": [{
+        "matches":    ["*://*.truyen.pro/*"],
+        "js":         ["content.js"],
+        "run_at":     "document_end",
+        "all_frames": false
+    }],
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "http://truyen.pro"
+    ]
+}
