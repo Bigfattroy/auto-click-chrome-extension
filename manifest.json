@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "AutoFollow",
     "description": "This allows the extension to auto click link and button in every hour",
-    "version": "1.0",
+    "version": "1.1",
     "browser_action": {
         "default_icon": {
             "38": "auto.png"
@@ -15,7 +15,7 @@
         "persistent": false
     },
     "content_scripts": [{
-        "matches":    ["*://*.truyen.pro/*"],
+        "matches":    ["*://*.truyen.pro/*","*://*.hentaihay.top/*"],
         "js":         ["content.js"],
         "run_at":     "document_end",
         "all_frames": false
@@ -23,7 +23,8 @@
     "permissions": [
         "activeTab",
         "tabs",
-        "https://truyen.pro",
-        "https://hentaihay.top"
+        "https://truyen.pro/",
+        "https://hentaihay.top/",
+        "*://*/*"
     ]
 }
