@@ -2,9 +2,9 @@ function clickTruyen() {
     document.querySelector('.btn-auto-update-truyen').click();
 };
 function clickHentai() {
-    document.querySelector('.btn-auto-update-hentai').click();
+    document.querySelector('.btn-auto-add-new').click();
     setTimeout(function () {
-        document.querySelector('.btn-auto-update-hentai').click();
+        document.querySelector('.btn-auto-update').click();
     }, 20 * 60 * 1000);
 
 };
